@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import TypewriterComponent from 'typewriter-effect';
 
 function Hero() {
     const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +28,7 @@ function Hero() {
             <div className="relative flex min-h-screen items-center justify-center px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                     {/* Top banner */}
-                    <div className={`hidden sm:mb-8 sm:flex sm:justify-center transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                    <div className={`hidden sm:mb-16 -mt-5 sm:flex sm:justify-center transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                         <div className="relative rounded-full px-3 py-1 text-sm text-gray-300 ring-1 ring-gray-700 hover:ring-violet-500 transition-all duration-300">
                             Frontend Developer based in Sri Lanka{' '}
                             <a href="#contact" className="font-semibold text-violet-400 hover:text-violet-300 transition-colors duration-300">
@@ -41,10 +42,10 @@ function Hero() {
                         <h1 className={`text-5xl font-bold tracking-tight text-white sm:text-7xl transform transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                             <span className="inline-block hover:text-violet-400 transition-colors duration-300">H</span>
                             <span className="inline-block hover:text-violet-400 transition-colors duration-300">i</span>
-                            <span className="inline-block">,</span>
-                            <span className="inline-block"> </span>
+                            <span className="inline-block hover:text-violet-400 transition-colors duration-300">,</span>
+                            <span className="inline-block hover:text-violet-400 transition-colors duration-300">&nbsp;</span>
                             <span className="inline-block hover:text-violet-400 transition-colors duration-300">I</span>
-                            <span className="inline-block hover:text-violet-400 transition-colors duration-300">'</span>
+                            <span className="inline-block hover:text-violet-400 transition-colors duration-300">&apos;</span>
                             <span className="inline-block hover:text-violet-400 transition-colors duration-300">m</span>
                             <span className="inline-block"> </span>
                             <span className="inline-block hover:text-violet-400 transition-colors duration-300">&nbsp;</span>
@@ -57,9 +58,21 @@ function Hero() {
                         </h1>
 
                         {/* Description */}
-                        <p className={`mt-8 text-lg leading-8 text-gray-300 transform transition-all duration-700 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                        {/* <p className={`mt-8 text-lg leading-8 text-gray-300 transform transition-all duration-700 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                             Crafting responsive websites with modern tech and clean code.
-                        </p>
+                        </p> */}
+                        <div className="mt-8 text-lg font-medium leading-8 text-gray-300 transform transition-all duration-700 delay-200">
+                            <TypewriterComponent
+                                options={{
+                                    strings: ['Frontend Developer', 'UI/UX Designer'],
+                                    autoStart: true,
+                                    loop: true,
+                                    deleteSpeed: 50,
+                                    delay: 100,
+                                    className: "text-2xl text-violet-400"
+                                }}
+                            />
+                        </div>
 
                         {/* CTA Buttons */}
                         <div className={`mt-10 flex items-center justify-center gap-x-6 transform transition-all duration-700 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -84,7 +97,7 @@ function Hero() {
                         </div>
 
                         {/* Social Links */}
-                        <div className={`mt-45 flex justify-center gap-5 transform transition-all duration-700 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                        <div className={`mt-55 flex justify-center gap-5 transform transition-all duration-700 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                             <a
                                 href="https://github.com"
                                 target="_blank"
