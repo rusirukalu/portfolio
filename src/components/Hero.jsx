@@ -94,16 +94,6 @@ function Hero() {
                         <div className="absolute inset-8 md:inset-10 bg-violet-500/20 rounded-full blur-3xl z-1" />
                     </div>
                 </div>
-
-                {/* Scroll indicator */}
-                <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transform transition-all duration-700 delay-400 ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}>
-                    {/* Desktop scroll indicator */}
-                    <div className="hidden md:flex w-6 h-10 border-2 border-gray-400 rounded-full justify-center p-1 hover:border-violet-400 transition-colors duration-300">
-                        <div className="w-1.5 h-3 bg-gray-400 rounded-full animate-bounce hover:bg-violet-400 transition-colors duration-300" />
-                    </div>
-                </div>
             </div>
         </section>
     );
