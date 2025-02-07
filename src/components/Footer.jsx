@@ -1,6 +1,7 @@
 function Footer() {
     return (
-        <footer className="relative bg-[#12121f] backdrop-blur-sm py-20 border-t border-gray-800/30 bg-gradient-to-b from-[#1a1a2e]/50 to-[#12121f]">
+        <footer className="relative bg-[#12121f] py-20 border-t border-[#1a1a2e]">
+
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
