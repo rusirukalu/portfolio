@@ -53,7 +53,7 @@ function Contact() {
                     <div className="space-y-6">
                         <h3 className="text-xl font-semibold text-white text-center mb-8">Find me on</h3>
                         <div className="flex flex-wrap justify-center gap-6">
-                            <a href="https://github.com/yourusername" 
+                            <a href="https://github.com/rusirukalu" 
                                target="_blank" 
                                rel="noopener noreferrer"
                                className="group relative p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 
@@ -65,7 +65,7 @@ function Contact() {
                                 </div>
                             </a>
 
-                            <a href="https://linkedin.com/in/yourusername" 
+                            <a href="https://linkedin.com/in/rusiru-salwathura-8a2b34303" 
                                target="_blank" 
                                rel="noopener noreferrer"
                                className="group relative p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 
@@ -77,7 +77,7 @@ function Contact() {
                                 </div>
                             </a>
 
-                            <a href="https://twitter.com/yourusername" 
+                            <a href="https://x.com/rusiru_kalu" 
                                target="_blank" 
                                rel="noopener noreferrer"
                                className="group relative p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 
@@ -88,7 +88,7 @@ function Contact() {
                                 </div>
                             </a>
 
-                            <a href="https://behance.net/yourusername" 
+                            <a href="https://behance.net/rusirusalwath" 
                                target="_blank" 
                                rel="noopener noreferrer"
                                className="group relative p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 
