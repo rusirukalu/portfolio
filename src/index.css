@@ -1,12 +1,42 @@
 @import "tailwindcss";
 
-@keyframes slideUp {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+    to {
+        transform: rotate(360deg);
     }
 }
+
+.animate-spin-regular {
+    animation: spin 20s linear infinite;
+}
+
+@keyframes wildSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+        border-radius: 50% 50% 50% 50%;
+    }
+    25% {
+        transform: rotate(90deg) scale(1.02);
+        border-radius: 60% 40% 70% 30%;
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+        border-radius: 30% 60% 40% 70%;
+    }
+    75% {
+        transform: rotate(270deg) scale(1.02);
+        border-radius: 70% 30% 60% 40%;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        border-radius: 50% 50% 50% 50%;
+    }
+}
+
+.animate-spin-wild {
+    animation: wildSpin 25s ease-in-out infinite;
+}
+
