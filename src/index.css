@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('/fonts/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+         url('/fonts/JetBrainsMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+  }
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
