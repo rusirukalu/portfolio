@@ -2,10 +2,23 @@
 
 body {
     font-family: 'JetBrains Mono', monospace;
+    background-color: #1a1a2e;
   }
   
 
-@keyframes spin {
+  @keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+  @keyframes spin {
     from {
         transform: rotate(0deg);
     }
