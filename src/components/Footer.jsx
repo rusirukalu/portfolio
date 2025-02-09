@@ -38,7 +38,7 @@ function Footer({
     <>
       {/* SEO Meta Tags via React Helmet */}
       <Helmet>
-        <title>Footer - {brandTitle}</title>
+        <title>{brandTitle}</title>
         <meta
           name="description"
           content={`${brandTitle} | ${brandDescription}. Get connected and explore more through our quick links and contact section.`}
