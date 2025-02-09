@@ -1,60 +1,97 @@
+/* Import TailwindCSS base styles */
 @import "tailwindcss";
 
+/* Global Styles */
+
+/* Apply a global font family and background color for the entire application */
 body {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: #1a1a2e;
+  font-family: 'JetBrains Mono', monospace; /* Monospace font for a clean developer aesthetic */
+  background-color: #1a1a2e; /* Dark background for a modern and professional look */
+}
+
+/* Keyframes for Animations */
+
+/**
+ * slideUp Animation
+ * Smoothly slides elements upwards while fading them in.
+ * Useful for entrance animations.
+ */
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px); /* Start slightly below the original position */
+    opacity: 0; /* Fully transparent at the start */
   }
-  
-
-  @keyframes slideUp {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  100% {
+    transform: translateY(0); /* Move to the original position */
+    opacity: 1; /* Fully visible at the end */
+  }
 }
 
-
-  @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/**
+ * spin Animation
+ * Rotates an element continuously in a clockwise direction.
+ * Useful for subtle decorative effects or loading indicators.
+ */
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Complete a full rotation */
+  }
 }
 
+/* Utility Class for Regular Spin Animation */
+/* Applies a slow, infinite spin to an element. Ideal for decorative elements. */
 .animate-spin-regular {
-    animation: spin 20s linear infinite;
+  animation: spin 20s linear infinite; /* Spins continuously over 20 seconds */
 }
 
+/**
+ * wildSpin Animation
+ * A more dynamic and playful rotation animation with scaling and border-radius variations.
+ * Creates an organic, morphing effect while spinning.
+ */
 @keyframes wildSpin {
-    0% {
-        transform: rotate(0deg) scale(1);
-        border-radius: 50% 50% 50% 50%;
-    }
-    25% {
-        transform: rotate(90deg) scale(1.02);
-        border-radius: 60% 40% 70% 30%;
-    }
-    50% {
-        transform: rotate(180deg) scale(1);
-        border-radius: 30% 60% 40% 70%;
-    }
-    75% {
-        transform: rotate(270deg) scale(1.02);
-        border-radius: 70% 30% 60% 40%;
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-        border-radius: 50% 50% 50% 50%;
-    }
+  0% {
+    transform: rotate(0deg) scale(1); /* Start at original size and shape */
+    border-radius: 50% 50% 50% 50%; /* Perfect circle at the start */
+  }
+  25% {
+    transform: rotate(90deg) scale(1.02); /* Slightly larger with asymmetric border-radius */
+    border-radius: 60% 40% 70% 30%;
+  }
+  50% {
+    transform: rotate(180deg) scale(1); /* Back to original size with a different shape */
+    border-radius: 30% 60% 40% 70%;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.02); /* Slightly larger with another asymmetric shape */
+    border-radius: 70% 30% 60% 40%;
+  }
+  100% {
+    transform: rotate(360deg) scale(1); /* Full rotation back to original size and shape */
+    border-radius: 50% 50% 50% 50%; /* Perfect circle again at the end */
+  }
 }
 
+/* Utility Class for Wild Spin Animation */
+/* Applies a dynamic, infinite spin with morphing effects. Great for attention-grabbing visuals. */
 .animate-spin-wild {
-    animation: wildSpin 25s ease-in-out infinite;
+  animation: wildSpin 25s ease-in-out infinite; /* Spins continuously with smooth easing over time */
 }
 
+/* Additional Notes:
+   - Animations should be used sparingly to avoid overwhelming users or impacting performance.
+   - Consider using `prefers-reduced-motion` media queries to disable animations for users who prefer minimal motion.
+   - Ensure animations are meaningful and enhance the user experience rather than being purely decorative.
+*/
+
+/* Example of Reduced Motion Media Query */
+/* Disables animations for users who prefer reduced motion settings in their OS. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-regular,
+  .animate-spin-wild {
+    animation: none; /* Disable animations entirely for accessibility purposes */
+  }
+}
