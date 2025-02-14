@@ -10,6 +10,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
+import Work from "../components/Work";
 
 /**
  * LandingPage Component
@@ -20,6 +21,7 @@ import Contact from "../components/Contact";
  *  • Skills: Showcase of technical and creative skills.
  *  • Services: List of professional services offered.
  *  • Contact: Ways for visitors to connect.
+ *  • Work: Portfolio projects and case studies.
  *
  * SEO Optimizations:
  *  • Uses React Helmet to dynamically inject meta tags (title, description, keywords,
@@ -57,6 +59,7 @@ function LandingPage() {
       <Skills />
       <Services />
       <Contact />
+      <Work />
     </>
   );
 }
