@@ -5,7 +5,7 @@
 
 /* Apply a global font family and background color for the entire application */
 body {
-  font-family: 'JetBrains Mono', monospace; /* Monospace font for a clean developer aesthetic */
+  font-family: "JetBrains Mono", monospace; /* Monospace font for a clean developer aesthetic */
   background-color: #1a1a2e; /* Dark background for a modern and professional look */
 }
 
@@ -18,7 +18,9 @@ body {
  */
 @keyframes slideUp {
   0% {
-    transform: translateY(30px); /* Start slightly below the original position */
+    transform: translateY(
+      30px
+    ); /* Start slightly below the original position */
     opacity: 0; /* Fully transparent at the start */
   }
   100% {
